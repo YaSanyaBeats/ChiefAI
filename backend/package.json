@@ -1,0 +1,39 @@
+{
+  "name": "chief_ai",
+  "version": "0.0.1",
+  "description": "Chief AI startap from SibGUTI gigachads",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.ts",
+    "db-client": "mongosh",
+    "db-server": "mongod -auth"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaSanyaBeats/ChiefAI.git"
+  },
+  "author": "YaSanyaBeats & AlexeiT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaSanyaBeats/ChiefAI/issues"
+  },
+  "homepage": "https://github.com/YaSanyaBeats/ChiefAI#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mongodb": "^6.15.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.25.0",
+    "express": "^5.1.0",
+    "install": "^0.13.0",
+    "nodemon": "^3.1.9",
+    "npm": "^11.3.0",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
