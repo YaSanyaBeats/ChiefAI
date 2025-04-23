@@ -11,7 +11,7 @@ import usersRouter from './routes/users';
 
 
 const app = express();
-const port = 3000
+const port = process.env.API_PORT;
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

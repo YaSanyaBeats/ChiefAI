@@ -4,9 +4,10 @@
   "description": "Chief AI startap from SibGUTI gigachads",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon src/app.ts",
+    "dev": "nodemon src/app.ts",
     "db-client": "mongosh",
-    "db-server": "mongod -auth"
+    "db-server": "mongod -auth",
+    "compass": "MongoDBCompass"
   },
   "repository": {
     "type": "git",
