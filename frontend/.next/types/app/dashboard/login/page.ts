@@ -1,4 +1,4 @@
-// File: C:\Users\YaSanyaPCAcc\Desktop\ChiefAI\frontend\src\app\dashboard\login\page.tsx
+// File: G:\CHIEF\ChiefAI\frontend\src\app\dashboard\login\page.tsx
 import * as entry from '../../../../../src/app/dashboard/login/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
