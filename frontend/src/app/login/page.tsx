@@ -145,13 +145,13 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
             }}
           >
             <FormControl>
-              <FormLabel htmlFor="email">Email</FormLabel>
               <TextField
                 error={emailError}
                 helperText={emailErrorMessage}
                 id="email"
                 type="email"
                 name="email"
+                label="Email"
                 placeholder="your@email.com"
                 autoComplete="email"
                 autoFocus
@@ -162,12 +162,12 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
               />
             </FormControl>
             <FormControl>
-              <FormLabel htmlFor="password">Password</FormLabel>
               <TextField
                 error={passwordError}
                 helperText={passwordErrorMessage}
                 name="password"
                 placeholder="••••••"
+                label="Password"
                 type="password"
                 id="password"
                 autoComplete="current-password"
