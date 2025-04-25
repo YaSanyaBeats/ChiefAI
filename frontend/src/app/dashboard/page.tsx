@@ -11,14 +11,9 @@ export default function Page() {
     return (
         <div>
             <h1>Мы в дашборде ура {session?.user?.name}</h1>
-            {session?.user?.image && 
-                <Image 
-                    src={session?.user?.image}
-                    alt="user image"
-                    width={96}
-                    height={96}
-                />
-            }
+            {session?.user?.image && (
+                <Image src={session?.user?.image} alt="user image" width={96} height={96} />
+            )}
             <Button variant="contained" endIcon={<LogoutIcon />} onClick={handleSignOut}>
                 Выйти
             </Button>
