@@ -72,10 +72,6 @@ export default function SignIn(props: { disableCustomTheme?: boolean }) {
   const [open, setOpen] = React.useState(false);
   const { data: session } = useSession();
 
-  if(session) {
-    redirect('dashboard');
-  }
-
   const handleClickOpen = () => {
     setOpen(true);
   };

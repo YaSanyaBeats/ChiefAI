@@ -1,26 +1,18 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import GoogleProvider from 'next-auth/providers/google';
+
+export const authOptions = {
+    providers: [
+      GoogleProvider({
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      }),
+    ],
+    secret: process.env.NEXTAUTH_SECRET,
+  };
 
 export const handleSignIn = () => 
 {
-    console.log(123);
     signIn('google');
 }
 export const handleSignOut = () => signOut();
-
-export const authRedirect = () => {
-    const router = useRouter();
-    const { data: session } = useSession();
-    console.log(session)
-
-    useEffect(() => {
-        if(!session) {
-            router.push('/login');
-        }
-    }, []);
-
-    return session;
-}

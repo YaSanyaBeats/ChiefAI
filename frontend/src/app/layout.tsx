@@ -21,15 +21,15 @@ export default function RootLayout({
         });
     }, []);
 
-    console.log(theme);
-
     return (
       <html lang="en">
         <SessionProvider>
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme} disableTransitionOnChange>
               <CssBaseline enableColorScheme />
-              <body>{children}</body>
+                <body>
+                    {children}
+                </body>
             </ThemeProvider>
           </AppRouterCacheProvider>
         </SessionProvider>
