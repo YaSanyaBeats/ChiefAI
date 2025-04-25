@@ -12,7 +12,7 @@ export default function RootLayout({
      const theme = React.useMemo(() => {
         return createTheme({
             cssVariables: {
-              colorSchemeSelector: 'data-mui-color-scheme',
+              colorSchemeSelector: ':root, [data-mui-color-scheme]',
               cssVarPrefix: 'template',
             },
             palette: {
