@@ -7,8 +7,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     const session = await getServerSession(authOptions)
 
     if (!session) {
-        redirect('/login')
+        redirect('/logi
     }
 
     return children
-    }
+}
