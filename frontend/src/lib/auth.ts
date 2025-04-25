@@ -1,4 +1,4 @@
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signIn, signOut } from 'next-auth/react'
 import GoogleProvider from 'next-auth/providers/google'
 
 export const authOptions = {

@@ -4,6 +4,8 @@ import eslint from '@eslint/js';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import prettierConfig from 'eslint-config-prettier';
+import { globalIgnores } from "eslint/config";
+import globals from "globals";
 
 export default [
   // Базовые правила ESLint
@@ -17,7 +19,7 @@ export default [
     rules: {
       ...next.configs.recommended.rules,
       '@next/next/no-html-link-for-pages': 'off',
-    }
+    },
   },
   
   // TypeScript правила
@@ -25,6 +27,10 @@ export default [
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: tsParser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
@@ -35,6 +41,8 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn'
     }
   },
+
+  globalIgnores([".next/"]),
   
   // Prettier (должен быть последним)
   prettierConfig
