@@ -1,7 +1,6 @@
 "use client";
-import { CssBaseline, createTheme } from "@mui/material";
+import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 import { SessionProvider } from "next-auth/react"
-import { ThemeProvider } from "styled-components";
 import React from "react";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 
