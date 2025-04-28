@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 export default function Page() {
     const { data: session } = useSession()
-    console.log('session', session)
+
     return (
         <div>
             <h1>Мы в дашборде ура {session?.user?.name}</h1>
